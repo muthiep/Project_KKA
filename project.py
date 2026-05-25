@@ -1,20 +1,20 @@
 daftar_buku = [
     [1, "Sisi tergelap surga", 85000],
-    [2, "Laskar Pelangi", 75000],
+    [2, "The Power of When", 75000],
     [3, "Atomic Habits", 95000]
 ]
 
 keranjang = []
 def display_menu():
     print("==============================================")
-    print("== Selamat Datang di Toko Kelontong Namiya ==")
+    print("== Selamat Datang di Toko Buku Namiya ==")
     print("==============================================")
-    print("Pilih aktivitas:")
+    print("Pilih aktivitas:") 
     print("1. Lihat daftar buku")
-    print("2. Masukkan buku ke keranjang")
+    print("2. Tambah buku ke keranjang")
     print("3. Lihat keranjang")
-    print("4. Check out")
-    print("5. Cetak struk")
+    print("4. Checkout")
+    print("5. Cari buku")
     print("6. Keluar")
 
 def lihat_buku():
@@ -121,13 +121,10 @@ def checkout():
 
     else:
         kembalian = uang - total
-
         print("Kembalian : Rp", kembalian)
         print("Pembayaran berhasil")
 
         keranjang.clear()
-
-
 
 while True:
     display_menu()
@@ -136,22 +133,16 @@ while True:
 
     if pilih == "1":
         lihat_buku()
-
     elif pilih == "2":
-        cari_buku()
-
-    elif pilih == "3":
         tambah_keranjang()
-
-    elif pilih == "4":
+    elif pilih == "3":
         lihat_keranjang()
-
-    elif pilih == "5":
+    elif pilih == "4":
         checkout()
-
+    elif pilih == "5":
+        cari_buku()
     elif pilih == "6":
         print("Program selesai")
         break
-
     else:
         print("Menu tidak tersedia")
